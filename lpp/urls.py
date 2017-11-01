@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf.urls import url
+from django.conf.urls.static import static
+from django.views.generic import RedirectView
+from django.contrib.staticfiles.views import serve
 
 urlpatterns = [
-    url(r'^', include('lpp_helloworld.urls', namespace='helloworld')),
+    url(r'^(?P<path>.*\..*)$', RedirectView.as_view(url='/static/%(path)s', permanent=False)),
+    url(r'^', include('lpp_index.urls', namespace='index')),
     url(r'^admin/', admin.site.urls),
+    url(r'^', serve, kwargs={'path': 'index.html'}),
 ]

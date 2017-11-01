@@ -6,7 +6,5 @@ from . import views
 
 
 urlpatterns = [
-    url(r'^(?P<path>.*\..*)$', RedirectView.as_view(url='/static/lpp_helloworld/%(path)s', permanent=False)),
     url(r'^api', views.index, name='index'),
-    url(r'^', serve, kwargs={'path': 'lpp_helloworld/index.html'}),
 ]
