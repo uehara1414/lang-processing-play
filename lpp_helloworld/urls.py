@@ -10,4 +10,3 @@ urlpatterns = [
     url(r'^(?P<path>.*\..*)$', RedirectView.as_view(url='/static/lpp_helloworld/%(path)s', permanent=False)),
     url(r'^api', views.index, name='index'),
 ]
-urlpatterns += static('front', document_root='lpp_helloworld/front')
