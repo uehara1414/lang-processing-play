@@ -9,6 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-view1">
@@ -19,14 +20,61 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         padding: 10px;
       }
+      paper-card {
+        width: 300px;
+      }
+      div.app-title {
+        size: 12pt;
+      }
     </style>
 
     <div class="card">
-      <div class="circle">1</div>
-      <h1>View One</h1>
-      <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
-      <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
+      <h1>lang-processing-play</h1>
+      <p>作成したアプリケーションをここに置いて行きます</p>
+
+      <paper-card image="images/fake.jpg">
+        <div class="card-content">
+          <div class="app-title">
+            App 1
+          </div>
+          <p>簡単な概要</p>
+          <p>すごいアプリの少し長めの説明<p/>
+        </div>
+      </paper-card>
+
+      <paper-card image="images/fake.jpg">
+        <div class="card-content">
+          <div class="app-title">
+            App 2
+          </div>
+          <p>簡単な概要</p>
+          <p>すごいアプリの少し長めの説明<p/>
+        </div>
+      </paper-card>
+
+      <paper-card image="images/fake.jpg">
+        <div class="card-content">
+          <div class="app-title">
+            App 3
+          </div>
+          <p>簡単な概要</p>
+          <p>すごいアプリの少し長めの説明<p/>
+        </div>
+      </paper-card>
+
+      <paper-card image="images/fake.jpg">
+        <div class="card-content">
+          <div class="app-title">
+            App 4
+          </div>
+          <p>簡単な概要</p>
+          <p>すごいアプリの少し長めの説明<p/>
+        </div>
+      </paper-card>
+
     </div>
+
+
   </template>
 
   <script>
